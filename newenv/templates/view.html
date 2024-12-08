@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generated Content</title>
+</head>
+<body>
+    <h1>Your Generated Content</h1>
+    {% if videos %}
+        <h2>Videos:</h2>
+        <ul>
+            {% for video in videos %}
+                <li><a href="{{ video }}" download>{{ video }}</a></li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    {% if images %}
+        <h2>Images:</h2>
+        <ul>
+            {% for image in images %}
+                <li><a href="{{ image }}" download>{{ image }}</a></li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
